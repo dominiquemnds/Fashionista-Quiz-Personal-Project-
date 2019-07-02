@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script>
+var regularscore=0;
+var hotscore=0;
+var frumpyscore=0;
+var modestscore=0;
+var skimpyscore=0;
+
+
+function clicked(type, question,id){
+
+document.getElementById(id).style.backgroundColor="DarkMagenta";
+
+if(type==='regular'){regularscore++;}
+else if(type==="hot"){hotscore++;}
+else if(type==="frumpy"){frumpyscore++;}
+else if(type==="modest"){modestscore++;}
+else{skimpyscore++;}
+
+if(question==='1'){
+document.getElementById("1").disabled=true;
+document.getElementById("2").disabled=true;
+document.getElementById("3").disabled=true;
+document.getElementById("4").disabled=true;
+document.getElementById("5").disabled=true;
+}
+
+else if(question==='2'){
+document.getElementById("6").disabled=true;
+document.getElementById("7").disabled=true;
+document.getElementById("8").disabled=true;
+document.getElementById("9").disabled=true;
+document.getElementById("10").disabled=true;
+}
+
+else if(question==='3'){
+document.getElementById("11").disabled=true;
+document.getElementById("12").disabled=true;
+document.getElementById("13").disabled=true;
+document.getElementById("14").disabled=true;
+document.getElementById("15").disabled=true;
+}
+
+else if(question==='4'){
+document.getElementById("16").disabled=true;
+document.getElementById("17").disabled=true;
+document.getElementById("18").disabled=true;
+document.getElementById("19").disabled=true;
+document.getElementById("20").disabled=true;
+}
+
+else if(question==='5'){
+document.getElementById("21").disabled=true;
+document.getElementById("22").disabled=true;
+document.getElementById("23").disabled=true;
+document.getElementById("24").disabled=true;
+document.getElementById("25").disabled=true;
+}
+
+else if(question==='6'){
+document.getElementById("26").disabled=true;
+document.getElementById("27").disabled=true;
+document.getElementById("28").disabled=true;
+document.getElementById("29").disabled=true;
+document.getElementById("30").disabled=true;
+}
+
+else if(question==='7'){
+document.getElementById("31").disabled=true;
+document.getElementById("32").disabled=true;
+document.getElementById("33").disabled=true;
+document.getElementById("34").disabled=true;
+document.getElementById("35").disabled=true;
+}
+
+else if(question==='8'){
+document.getElementById("36").disabled=true;
+document.getElementById("37").disabled=true;
+document.getElementById("38").disabled=true;
+document.getElementById("39").disabled=true;
+document.getElementById("40").disabled=true;
+}
+
+else if(question==='9'){
+document.getElementById("41").disabled=true;
+document.getElementById("42").disabled=true;
+document.getElementById("43").disabled=true;
+document.getElementById("44").disabled=true;
+document.getElementById("45").disabled=true;
+}
+
+else{
+document.getElementById("46").disabled=true;
+document.getElementById("47").disabled=true;
+document.getElementById("48").disabled=true;
+document.getElementById("49").disabled=true;
+document.getElementById("50").disabled=true;
+}
+
+}
+
+function tallyup(){
+var questions=document.getElementById("quiz");
+var intro=document.getElementById("intro");
+var biggest= Math.max(regularscore, hotscore, modestscore, frumpyscore, skimpyscore);
+questions.style.display="none";
+intro.style.display="none";
+
+if(biggest===regularscore){
+	var myfashion=document.getElementById("regularparagraph");
+	var parSetting=myfashion.style.display;
+
+
+	if(parSetting==="none"){
+	alert("inside the correct code block");
+		myfashion.style.display="block";
+		alert("I offically don't know what's wrong");
+	}
+}
+
+
+else if(biggest===hotscore){
+	var myfashion=document.getElementById("hotparagraph");
+	var parSetting=myfashion.style.display;
+
+
+	if(parSetting==="none"){
+		myfashion.style.display="block";
+	}
+}
+
+else if(biggest===modestscore){
+	var myfashion=document.getElementById("modestparagraph");
+	var parSetting=myfashion.style.display;
+
+
+	if(parSetting==="none"){
+		myfashion.style.display="block";
+	}
+}
+
+else if(biggest===frumpyscore){
+	var myfashion=document.getElementById("frumpyparagraph");
+	var parSetting=myfashion.style.display;
+
+
+	if(parSetting==="none"){
+		myfashion.style.display="block";
+	}
+}
+else if(biggest===skimpyscore){
+	var myfashion=document.getElementById("skimpyparagraph");
+	var parSetting=myfashion.style.display;
+
+
+	if(parSetting==="none"){
+		myfashion.style.display="block";
+	}
+}
+
+}
+
+</script>
+<link href="quizcss.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+<title>Are you a Fashionista or a Fashion Flop? Find out!</title>
+
+<h1>Are you a Fashionista or a Fashion Flop? QUIZ!</h1>
+
+<p id="intro">Welcome to the quiz..This quiz will definitively prove whether or not your fashion sense is on point, or leaves something to be desired.
+Send your results to friends to let them know you're offically the trend setter of the group.
+Or throw your closet away when your realize you're sending people towards the hills. Ready to face the truth?... Let's put your skills to the test...
+</p>
+
+<form id="quiz" name="quiz" action="#">
+<label for="q1" class="label" name="l1"><strong>Question 1: </strong>Let's start out easy...You're going on a date, what outfit do you wear?</label>
+<table id="q1" name="q1" class="question">
+	<tr>
+		<td id="1a" ><input type="radio" id="1" onclick="clicked('regular','1','1a')"/>Jeans and a T-Shirt.</td>
+		<td id="2a"><input type="radio" id="2" onclick="clicked('hot', '1','2a')" />A form fitting dress and puffy jacket.</td>
+	</tr>
+	<tr>
+		<td id="3a" ><input type="radio" id="3" onclick="clicked('frumpy','1','3a')" />A sweater and jeans.</td>
+		<td id="4a"><input type="radio" id="4" onclick="clicked('modest','1','4a')"/>A blouse and well fitting pants.</td>
+	</tr>
+	<tr>
+		<td colspan="2"  id="5a"><input type="radio" id="5" onclick="clicked('skimpy','1','5a')" />As little clothes as legally possible.</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q2" class="label" name="l2"><strong>Question 2: </strong>Nice. It's the next day, and now you're going to a bar. What do you arrive in?</label>
+<table id="q2" name="q2" class="question">
+	<tr>
+		<td id="6a"><input type="radio"  id="6" onclick="clicked('regular','2','6a')" />Jeans and a T-Shirt. Maybe a cute jacket.</td>
+		<td id="7a"><input type="radio" id="7" onclick="clicked('hot','2','7a')" />A fitted T-Shirt and a skirt that just might be too short.</td>
+	</tr>
+	<tr>
+		<td id="8a"><input type="radio" id="8"onclick="clicked('frumpy','2','8a')" />Whatever I was already wearing. <br>It's a bar, not a ball.</td>
+		<td id="9a"><input type="radio" id="9" onclick="clicked('modest','2','9a')"/>A high collared shirt and long pants with<br>a funky belt to add style.</td>
+	</tr>
+	<tr>
+		<td colspan= "2" id="10a"><input type="radio" id="10" onclick="clicked('skimpy','2','10a')"/>A form fitting dress and heels.</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q3" class="label" name="l3"><strong>Question 3: </strong>That was a great weekend, but it's time to head to work. What are you wearing on a Monday in the office?</label>
+<table id="q3" name="q3" class="question">
+	<tr>
+		<td id="11a"><input type="radio" id="11" onclick="clicked('regular', '3','11a')"/>Skirt and blouse, something simple.</td>
+		<td id="12a"><input type="radio" id="12" onclick="clicked('hot','3','12a')" />A flowy dress. It may be a Monday<br> but I'll bring some fun to the office!</td>
+	</tr>
+	<tr>
+		<td id="13a"><input type="radio" id="13" onclick="clicked('frumpy', '3','13a')" />Whatever I can throw on in a scramble that also <br> looks professional. And my hair might be wet..</td>
+		<td id="14a"><input type="radio" id="14" onclick="clicked('modest', '3','14a')"/>A blouse with a cardigan and dress pants.</td>
+	</tr>
+	<tr>
+		<td colspan="2"id="15a"><input type="radio" id="15" onclick="clicked('skimpy', '3','15a')"/>A skirt and a cute top my office crush might notice.<br>It's still work appropriate!</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q4" class="label" name="l4"><strong>Question 4: </strong>After work, your friends want to drag you to a wine tasting nearby. With what outfit do you wow the waitstaff?</label>
+<table id="q4" name="q4" class="question">
+	<tr>
+		<td id="16a"><input type="radio" id="16" onclick="clicked('regular', '4','16a')"/>A professional looking dress.</td>
+		<td id="17a"><input type="radio" id="17" onclick="clicked('hot', '4','17a')"/>A cute dress or a tight skirt, you never know who's single! </td>
+	</tr>
+	<tr>
+		<td id="18a"><input type="radio" id="18" onclick="clicked('frumpy', '4','18a')"/>Probably a sweater. Possibly some ill fitting pants...<br>But not both at once.</td>
+		<td id="19a"><input type="radio" id="19"onclick="clicked('modest', '4','19a')"/>Whatever I wore to work that day.</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="20a"><input type="radio" id="20" onclick="clicked('skimpy', '4','20a')"/>A skirt and fitted top.</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q5" class="label" name="l5"><strong>Question 5: </strong>The day is finally over and you're headed to bed. Which pajama's seem most comfortable to you?</label>
+<table id="q5" name="q5" class="question">
+	<tr>
+		<td id="21a"><input type="radio" id="21"  onclick="clicked('regular','5','21a')"/>A big T-Shirt.</td>
+		<td id="22a"><input type="radio" id="22" onclick="clicked('hot','5','22a')"/>Shorts and a cami.</td>
+	</tr>
+	<tr>
+		<td id="23a"><input type="radio" id="23" onclick="clicked('frumpy','5','23a')"/>Pajama pants and an old shirt. If you caught me on the <br>wrong night, the clothes I'm already wearing..</td>
+		<td id="24a"><input type="radio" id="24" onclick="clicked('modest','5','24a')"/>A nightgown.</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="25a"><input type="radio" id="25" onclick="clicked('skimpy','5','25a')"/>What pajamas?</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q6" class="label" name="l6"><strong>Question 6: </strong>New day! Today you've got a big presentation at work. Time to shine! What are you wearing?</label>
+<table id="q6" name="q6" class="question">
+	<tr>
+		<td id="26a"><input type="radio" id="26" onclick="clicked('regular','6','26a')"/>My regular blouse and dress pants. <br>It's mostly a meeting of co-workers anyway.</td>
+		<td id="27a"><input type="radio" id="27" onclick="clicked('hot','6','27a')"/>A fitted skirt and patterned long sleeve blouse. <br>It shows my style but means business.</td>
+	</tr>
+	<tr>
+		<td id="28a"><input type="radio" id="28" onclick="clicked('frumpy','6','28a')"/>Loose fitting dress pants, a blouse, and a cardigan on top. <br>If I'm honest, the blouse probably isn't ironed..</td>
+		<td id="29a"><input type="radio" id="29" onclick="clicked('modest','6','29a')"/>Dress pants, a blazer, and a patterned shirt.</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="30a"><input type="radio" id="30" onclick="clicked('skimpy','6','30a')"/>A skirt and blouse. Professional but still kinda hot..</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q7" class="label" name="l7"><strong>Question 7: </strong>Good news! You aced the presentation. Now your S.O is coming over to celebrate with a romantic dinner. What are you wearing for your sweetheart?</label>
+<table id="q7" name="q7" class="question">
+	<tr>
+		<td id="31a"><input type="radio" id="31" onclick="clicked('regular','7','31a')"/>Jeans and a sexy top.</td>
+		<td id="32a"><input type="radio" id="32" onclick="clicked('hot','7','32a')"/>A tight mini dress. Gotta make it a festive celebration!</td>
+	</tr>
+	<tr>
+		<td id="33a"><input type="radio" id="33" onclick="clicked('frumpy','7','33a')"/>A sweater and my comfy shoes. <br>My partner sees me all the time anyway..</td>
+		<td id="34a"><input type="radio" id="34" onclick="clicked('modest','7','34a')"/>A maxi dress and some layered jewelry.</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="35a"><input type="radio" id="35" onclick="clicked('skimpy','7','35a')"/>Something barely there. It'll be off soon anyway!</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q8" class="label" name="l8"><strong>Question 8: </strong>Fast forward to the weekend and it's time for a girls night. What are you wearing to the club?</label>
+<table id="q8" name="q8" class="question">
+	<tr>
+		<td id="36a"><input type="radio" id="36" onclick="clicked('regular','8','36a')"/>A cute dress or skirt. It's time to have fun!</td>
+		<td id="37a"><input type="radio" id="37" onclick="clicked('hot','8','37a')"/>Skimpy shorts and a cute top.</td>
+	</tr>
+	<tr>
+		<td id="38a"><input type="radio" id="38" onclick="clicked('frumpy','8','38a')"/>Jeans and a T-Shirt. Better to dress <br>for the spills that are bound to happen..</td>
+		<td id="39a"><input type="radio" id="39" onclick="clicked('modest','8','39a')"/>Long skirt and fitted top. <br>I want my hips to do the talking!</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="40a"><input type="radio" id="40" onclick="clicked('skimpy','8','40a')"/>Something Instagram baddie worthy. Possibly see-through!</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q9" class="label" name="l9"><strong>Question 9: </strong>It's the next day and you're off to a family dinner at a nice resturant. What do you wear around your family?</label>
+<table id="q9" name="q9" class="question">
+	<tr>
+		<td id="41a"><input type="radio" id="41" onclick="clicked('regular','9','41a')"/>A nice dress</td>
+		<td id="42a"><input type="radio"  id="42" onclick="clicked('hot','9','42a')"/>A patterned skirt and long sleeve shirt</td>
+	</tr>
+	<tr>
+		<td id="43a"><input type="radio" id="43" onclick="clicked('frumpy','9','43a')"/>Does it even matter? <br>This is my family we're talking about...</td>
+		<td id="44a"><input type="radio" id="44" onclick="clicked('modest','9','44a')"/>A nice sweater and jeans.</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="45a"><input type="radio" id="45" onclick="clicked('skimpy','9','45a')"/>A skirt and blouse.</td>
+	</tr>
+</table>
+
+<br>
+<br>
+
+<label for="q10" class="label" name="l10"><strong>Question 10: </strong>Last but not least! You have a sudden black tie event to go to. What do you have in your closet that will work?</label>
+<table id="q10" name="q10" class="question">
+	<tr>
+		<td id="46a"><input type="radio" id="46"  onclick="clicked('regular','10','46a')"/>I definitely have a floor length gown to pull out. <br>It's old but it'll work!</td>
+		<td id="47a"><input type="radio" id="47"  onclick="clicked('hot','10','47a')"/>I'm always prepared for this moment. <br>I'm bringing the drama with a mermaid silouette</td>
+	</tr>
+	<tr>
+		<td id="48a"><input type="radio" id="48"  onclick="clicked('hot','10','48a')"/>Yikes! I definitely don't have anything. <br>Time to skip...</td>
+		<td id="49a"><input type="radio" id="49"  onclick="clicked('modest','10','49a')"/>I keep a bunch of long dresses..<br>If I dress one up I bet I can pass for black tie!</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="50a"><input type="radio" id="50"  onclick="clicked('skimpy','10','50a')"/>Let's skip the long gown! I'm pulling out my patterned cocktail dress to make a statement.</td>
+	</tr>
+</table>
+
+<br>
+<br>
+<input type="submit" class="submit" onclick="tallyup()" value="Finish"/>
+
+</form>
+
+<p id="regularparagraph" class="results" style="display:none">You have a pretty regular fashion sense. Now this doesn't mean that your fashion sense is boring, or bad, it's actually a good thing!
+You know how to dress for every occasion and aren't afraid to bring some heat if appropriate. Jeans and a T-shirt could be your go to, but you're not afraid to expand your fashion focus, or your closet...
+Only advice? Try to take some more risks! You have all the basics down, now you can experiement with confidence. Overall you're a snazzy dresser and always event appropriate. <br><br>
+~~I hope you enjoyed this quiz! If you want to see more, give your quiz/website ideas to Dominique!~~</p>
+
+<p id="hotparagraph" class="results" style="display:none">When it comes to fashion, you're red hot! You're a selective risk taker, a trend-setter, and unafraid to show a bit of skin..
+ Best of all you know how to turn up or turn down the gas for different occasions. A night out on the town might demand a little black dress, and you're up for that, but you also know how to make a turtle neck look red hot.
+ With you, it's not about the clothes, you know how to bring the heat to anything you wear. So keep it up! <br><br>
+ ~~I hope you enjoyed this quiz! If you want to see more, give your quiz/website ideas to Dominique!~~</p>
+ 
+ <p id="frumpyparagraph" class="results" style="display:none">Fashion may not be your strong suit... Outfit coordination and dressing up aren't really your thing. That's alright though! You're more focused on work 
+ and your actual life to care whether the shirt you wore to yesterday's meeting was perfectly pressed. Going to the mall pretty much sounds like a trip to a war zone, and actually shopping?.. Now that's just somehting you straight up avoid. 
+ Even though you may not be the most fashion forward of your group, you continue to bring content and good work where you go. You're more focused than most of your peers.. And hey, when you really need to pull it out, you do.
+ Only advice? Do stock up on some cute clothes if you really don't have them. You never know when you'll be invited someplace where sneakers just won't cut it. And don't be afraid to take some fashion risks!<br><br>
+  ~~I hope you enjoyed this quiz! If you want to see more, give your quiz/website ideas to Dominique!~~</p>
+  
+  <p id="modestparagraph" class="results" style="display:none">When it comes to fashion, you're more of a modest dresser but that doesn't mean you don't have style. From maxi dresses to fitted sweaters, high collared shirts and everything in-between
+   you are well versed on how to be alluring without going overboard. Perfectly in balance, you'll rock a conservative skirt and top with blinged out jewerly and wow everyone with your unique fashion sense. 
+   In a world of Instagram baddies and Playboy bunnies, you are a breath of fresh air. Soon the fashion bloggers will be asking <strong>you </strong> for tips on styling turtlenecks.<br><br>
+   ~I hope you enjoyed this quiz! If you want to see more, give your quiz/website ideas to Dominique!~~</p>
+   
+   <p id="skimpyparagraph" class="results" style="display:none">Call up your local photographers because you have the fashion sense of an Instagram baddie. Anything new, in trend, or slightly scandelous is already in your closet and you're online buying the hottest one in a different color.
+    You're not afraid to go bold with your threads, or lack thereof. At the club, you're known to wear the hottest dress, dance on the bar, and slip out while two guys fight over who can buy you another round. 
+	 You're the life (and eye-candy) of every party! This is all well and good, but you might have a small problem when it comes to professional attire. Something about slipping out of that skin tight skirt just doesn't feel right so sometimes you wear it to a meeting. 
+	 Only advice? The next time you hit up H&M, stick to <strong>only </strong> the work clothes. It might be time to build up your conservative side (as scary as that sounds..) 
+	 <br><br>~I hope you enjoyed this quiz! If you want to see more, give your quiz/website ideas to Dominique!~~</p>
+  
+
+
+</body>
+
+</html>

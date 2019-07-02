@@ -1,0 +1,60 @@
+body{
+	background-color:PapayaWhip;
+	
+}
+
+h1{
+	color:DarkMagenta;
+	font-family:Georgia;
+	text-align:center;
+}
+
+p{
+	color:DarkMagenta;
+	font-family:Georgia;
+	padding-left:80px;
+	padding-right:80px;
+	text-align:center;
+	
+}
+
+label{
+	color:Indigo;
+	font-size:20px;
+	font-family:Georgia;
+	
+	
+}
+
+.question tr td{
+	background-color:PeachPuff;
+	border: 6px solid;
+	border-color:Plum;
+	text-align:center;
+	font-size:16px;
+
+}
+.question{
+	
+	padding-left:300px;
+}
+
+tr td:hover{
+	
+	background-color:DarkMagenta;
+}
+
+.submit{
+	
+	color:DarkMagenta;
+	border:2px solid; 
+	height:50px;
+	width:100px;
+	font-size:20px;
+	font-family:Georgia;
+	position:fixed;
+	bottom:10px;
+	right:100px;
+	background-color:PapayaWhip;
+}
+
